@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="breakfast.css">
+	<style>
+		body {
+			background-color: #060606;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<table class="menu-table">
+		<thead>
+			<tr>
+				<th>Day</th>
+				<th>Breakfast Item</th>
+			</tr>
+		</thead>
+		<tbody id="menuItems">
+			<tr>
+				<td>Monday</td>
+				<td>Aloo Paratha / Poha</td>
+				<td><button class="vote-button">Vote</button> <span class="vote-count">0</span></td>
+			</tr>
+			<tr>
+				<td>Tuesday</td>
+				<td>Puri Sabji / Boiled Egg + Banana</td>
+				<td><button class="vote-button">Vote</button> <span class="vote-count">0</span></td>
+			</tr>
+			<tr>
+				<td>Wednesday</td>
+				<td>Plain Paratha / Aloo sandwich </td>
+				<td><button class="vote-button">Vote</button> <span class="vote-count">0</span></td>
+			</tr>
+			<tr>
+				<td>Thursday</td>
+				<td>Bread Butter / Onion Paratha</td>
+				<td><button class="vote-button">Vote</button> <span class="vote-count">0</span></td>
+			</tr>
+			<tr>
+				<td>Friday</td>
+				<td>Paw Bhaji / Gobhi Paratha</td>
+				<td><button class="vote-button">Vote</button> <span class="vote-count">0</span></td>
+			</tr>
+			<tr>
+				<td>Saturday</td>
+				<td>Aloo Pakoda / Uttpam</td>
+				<td><button class="vote-button">Vote</button> <span class="vote-count">0</span></td>
+			</tr>
+			<tr>
+				<td>Sunday</td>
+				<td>Fried Rice / Boiled Channa</td>
+				<td><button class="vote-button">Vote</button> <span class="vote-count">0</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		const voteButtons = document.querySelectorAll('.vote-button');
+		const voteCounts = document.querySelectorAll('.vote-count');
+
+		voteButtons.forEach((button, index) => {
+			button.addEventListener('click', () => {
+				voteCounts[index].textContent++;
+			});
+		});
+	</script>
+</body>
+</html>
